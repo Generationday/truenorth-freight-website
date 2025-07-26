@@ -1,21 +1,25 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
   color: #333;
-  background-color: #f8f9fa;
 }
 
-header .hero {
+header {
   position: relative;
-  text-align: center;
-  color: white;
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
-  height: 80vh;
+  height: 100%;
   object-fit: cover;
-  filter: brightness(65%);
+  filter: brightness(0.6);
 }
 
 .hero-text {
@@ -23,81 +27,125 @@ header .hero {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.hero-text h1 {
-  font-size: 3.5rem;
-  margin: 0;
-}
-
-.hero-text p {
-  font-size: 1.5rem;
-  margin: 10px 0 20px;
+  text-align: center;
+  color: white;
 }
 
 .cta-button {
-  background-color: #0066cc;
-  color: white;
+  display: inline-block;
   padding: 12px 24px;
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  border-radius: 6px;
   text-decoration: none;
-  border-radius: 5px;
   font-weight: 600;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.content-section {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0 20px;
+.cta-button:hover {
+  background-color: #005fa3;
+}
+
+nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0074D9;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #005fa3;
+}
+
+.section {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1rem;
   text-align: center;
 }
 
 .section-image {
   width: 100%;
-  max-width: 700px;
-  margin-top: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin-top: 1rem;
 }
 
-.testimonials .testimonial {
-  background: white;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 700px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+testimonial {
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid #0074D9;
   text-align: left;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: 0 auto;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
 }
 
-input, textarea {
-  padding: 12px;
-  font-size: 16px;
+form input,
+form textarea {
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  resize: vertical;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
-button {
-  background-color: #28a745;
+form button {
+  background-color: #0074D9;
   color: white;
-  padding: 12px;
-  font-size: 16px;
   border: none;
-  border-radius: 5px;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005fa3;
 }
 
 footer {
-  background-color: #222;
+  background-color: #001f3f;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
 }
